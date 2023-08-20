@@ -1,0 +1,31 @@
+        ______________
+   ___  || | |  _ \| |    
+  / __| || | | |_) | |    
+ | (__  ||_| |  _ <| |____ 
+  \___| \___/|_| \_\______|
+ _______
+
+
+:.. Guardar Respuesta en un Archivo ..:
+curl -o respuesta.log http://127.0.0.1
+
+
+:.. Descargar un Archivo sin Modificar su Nombre ..:
+curl -O http://127.0.0.1/nombre-archivo.txt
+
+
+:.. Imprimir sólo los Headers de Respuesta ..:
+curl -I http://127.0.0.1
+
+
+:.. Listar Contenido de un Directorio ..:
+curl -l http://127.0.0.1/Music
+curl -l ftp://127.0.0.1:21/Documents
+
+
+:.. Permitir Redirección ..:
+curl -L http://127.0.0.1/?redirecUrl=redirection
+
+
+:.. Medir Tiempos de Respuesta .::
+curl -w '%{time_total}' --output /dev/null -s "http://127.0.0.1/?Search=item"
