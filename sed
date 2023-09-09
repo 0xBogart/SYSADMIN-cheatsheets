@@ -19,7 +19,6 @@ sed 's/^/Texto al inicio/'
 
  :.. Imprimir una línea concreta 2 veces (Ex: línea 1) ..:
  sed '1p'
-
  
 
 :.. Eliminar Líneas Vacías ..:
