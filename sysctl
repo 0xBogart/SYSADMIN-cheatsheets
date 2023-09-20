@@ -1,3 +1,8 @@
+sysctl : Configurar Parámetros del Kernel en Tiempo de Ejecución
+
+sysctl -w    # Permite Escribir un Valor en una Variable
+sysctl -p    # Leer Variables desde Archivo
+
 # Deshabilitar IPv6 #
 net.ipv6.conf.all.disable_ipv6 = 1    # Todas las interfaces
 net.ipv6.conf.eth0.disable_ipv6 = 1   # Interfaz específica { eth0, wlan0, eno1 }
