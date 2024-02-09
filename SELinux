@@ -1,0 +1,49 @@
+███████╗███████╗██╗     ██╗███╗   ██╗██╗   ██╗██╗  ██╗
+██╔════╝██╔════╝██║     ██║████╗  ██║██║   ██║╚██╗██╔╝
+███████╗█████╗  ██║     ██║██╔██╗ ██║██║   ██║ ╚███╔╝ 
+╚════██║██╔══╝  ██║     ██║██║╚██╗██║██║   ██║ ██╔██╗ 
+███████║███████╗███████╗██║██║ ╚████║╚██████╔╝██╔╝ ██╗
+╚══════╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝
+______________________________________________________
+
+[Reporte AVC]
+aureport -a
+
+AVC Report
+===============================================================
+# date time comm subj syscall class permission obj result event
+===============================================================
+1. 02/09/2024 12:15:22 (systemd) system_u:system_r:kernel_t:s0 59 process transition unconfined_u:unconfined_r:unconfined_t:s0 denied 89
+2. 02/09/2024 12:15:22 login system_u:system_r:kernel_t:s0 59 process transition unconfined_u:unconfined_r:unconfined_t:s0 denied 94
+
+
+[Informe Resumido]
+aureport -i
+
+Summary Report
+======================
+Range of time in logs: 09/18/2023 11:46:15.420 - 02/09/2024 12:40:34.642
+Selected time for report: 09/18/2023 11:46:15 - 02/09/2024 12:40:34.642
+Number of changes in configuration: 445
+Number of changes to accounts, groups, or roles: 3
+Number of logins: 18
+Number of failed logins: 0
+Number of authentications: 19
+Number of failed authentications: 4
+Number of users: 2
+Number of terminals: 6
+Number of host names: 5
+Number of executables: 12
+Number of commands: 15
+Number of files: 2
+Number of AVC's: 9
+Number of MAC events: 18
+Number of failed syscalls: 9
+Number of anomaly events: 0
+Number of responses to anomaly events: 0
+Number of crypto events: 70
+Number of integrity events: 0
+Number of virt events: 0
+Number of keys: 0
+Number of process IDs: 269
+Number of events: 2327
