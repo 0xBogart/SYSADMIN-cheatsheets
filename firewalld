@@ -1,0 +1,38 @@
+░░░░░░░ ░░ ░░░░░░  ░░░░░░░ ░░     ░░  ░░░░░  ░░      ░░      ░░░░░░  
+▒▒      ▒▒ ▒▒   ▒▒ ▒▒      ▒▒     ▒▒ ▒▒   ▒▒ ▒▒      ▒▒      ▒▒   ▒▒ 
+▒▒▒▒▒   ▒▒ ▒▒▒▒▒▒  ▒▒▒▒▒   ▒▒  ▒  ▒▒ ▒▒▒▒▒▒▒ ▒▒      ▒▒      ▒▒   ▒▒ 
+▓▓      ▓▓ ▓▓   ▓▓ ▓▓      ▓▓ ▓▓▓ ▓▓ ▓▓   ▓▓ ▓▓      ▓▓      ▓▓   ▓▓ 
+██      ██ ██   ██ ███████  ███ ███  ██   ██ ███████ ███████ ██████  
+____________________________________________________________________
+
+[Listar Zonas Disponibles]
+firewall-cmd --get-zones
+
+
+[Listar Zonas Disponibles con Detalle]
+firewall-cmd --list-all-zones
+
+
+[Información sobre una Zona Concreta]
+firewall-cmd --info-zone=public
+firewall-cmd --info-zone=external
+firewall-cmd --info-zone=block
+firewall-cmd --info-zone=internal
+firewall-cmd --info-zone=trusted
+firewall-cmd --info-zone=drop
+firewall-cmd --info-zone=home
+firewall-cmd --info-zone=work
+firewall-cmd --info-zone=dmz
+
+
+[Listar Puertos Habilitados]
+firewall-cmd --list-ports
+
+
+[Habilitar un Puerto en el Firewall]
+firewall-cmd --add-port=80/tcp --permanent
+firewall-cmd --add-port=443/tcp --permanent
+
+
+[Aplicar Cambios]
+firewall-cmd --reload
