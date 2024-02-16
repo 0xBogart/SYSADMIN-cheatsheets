@@ -6,8 +6,14 @@
 ____________________________________________________________________
 
 
-[Ruta de Servicios Predefinidos o Personalizados en XML]
+[Rutas de Configuración Relevantes]
 /usr/lib/firewalld/services
+/usr/lib/firewalld/icmptypes
+/usr/lib/firewalld/policies
+/usr/lib/firewalld/zones
+/usr/lib/firewalld/xmlschema
+/usr/lib/firewalld/ipsets
+/usr/lib/firewalld/helpers
 
 
 [Listar Zona y Politica Actual]
