@@ -5,6 +5,10 @@
 ██      ██ ██   ██ ███████  ███ ███  ██   ██ ███████ ███████ ██████  
 ____________________________________________________________________
 
+[Listar Zona y Politica Actual]
+firewall-cmd --list-all
+
+
 [Listar Zonas Disponibles]
 firewall-cmd --get-zones
 
@@ -25,13 +29,46 @@ firewall-cmd --info-zone=work
 firewall-cmd --info-zone=dmz
 
 
+[Añadir Multiples Interfaces a una Zona]
+firewall-cmd --zone=public --add-interface=eth0 --add-interface=eth1 --permanent
+
+
 [Listar Puertos Habilitados]
 firewall-cmd --list-ports
 
 
-[Habilitar un Puerto en el Firewall]
+[Habilitar Puerto]
 firewall-cmd --add-port=80/tcp --permanent
 firewall-cmd --add-port=443/tcp --permanent
+
+
+[Eliminar Puerto]
+firewall-cmd --remove-port=80/tcp --permanent
+firewall-cmd --remove-port=443/tcp --permanent
+
+
+[Habilitar Servicio]
+firewall-cmd --permanent --zone=public --add-service=ssh
+firewall-cmd --permanent --zone=public --add-service=http
+firewall-cmd --permanent --zone=public --add-service=https
+
+
+[Eliminar un Servicio]
+firewall-cmd --permanent --zone=public --remove-service=ssh
+
+
+[Añadir Reglas]
+firewall-cmd --add-rich-rule='rule protocol value="icmp" accept' --permanent  #Permitir ICMP
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="IP-A-BLOQUEAR" reject' #Bloquear Conectividad de una IP Concreta
+firewall-cmd --permanent --zone=public --add-source=IP  #Permitir Conectividad de una IP Concreta
+
+
+[Eliminar Reglas]
+firewall-cmd --remove-rich-rule='rule protocol value="icmp" accept' --permanent
+firewall-cmd --remove-rich-rule='rule family="ipv6" icmp-type name="neighbour-advertisement" accept'
+firewall-cmd --remove-rich-rule='rule family="ipv6" icmp-type name="neighbour-solicitation" accept'
+firewall-cmd --remove-rich-rule='rule family="ipv6" icmp-type name="router-advertisement" accept'
+firewall-cmd --remove-rich-rule='rule family="ipv6" icmp-type name="redirect" accept'
 
 
 [Aplicar Cambios]
