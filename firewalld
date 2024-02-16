@@ -5,6 +5,11 @@
 ██      ██ ██   ██ ███████  ███ ███  ██   ██ ███████ ███████ ██████  
 ____________________________________________________________________
 
+
+[Ruta de Servicios Predefinidos o Personalizados en XML]
+/usr/lib/firewalld/services
+
+
 [Listar Zona y Politica Actual]
 firewall-cmd --list-all
 
